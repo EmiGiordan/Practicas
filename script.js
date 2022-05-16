@@ -4,6 +4,7 @@ y al primero de las 2 AM ingrese gratis */
 
 // function ingresoMayor(edad){
 //     edad = prompt("Ingrese su edad.");
+//god
 //     if ( edad < 18 ) {
 //         alert("No puede ingresar.");
 //     } else {
