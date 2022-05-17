@@ -252,131 +252,249 @@ sumar p y a */
 //Primero vamos crear una clase, con 3 atributos mas las funciones básicas.
 
 
-const appJuegos = []
+// const appJuegos = []
 
-class AppJuegos{
-    constructor (name, developer, puntuacion, cantidadResenias, peso, cantidadDescargas){
-        this.name = name
-        this.developer = developer
-        this.puntuacion = puntuacion
-        this.cantidadResenias = cantidadResenias
-        this.peso = peso
-        this.cantidadDescargas = cantidadDescargas
-        this.instalado = false
-        this.abierto = false
-        this.puntajePromedio = (this.puntuacion + this.cantidadDescargas + this.peso) / 3 
-        appJuegos.push(this)
-    }
+// class AppJuegos{
+//     constructor (name, developer, puntuacion, cantidadResenias, peso, cantidadDescargas){
+//         this.name = name
+//         this.developer = developer
+//         this.puntuacion = puntuacion
+//         this.cantidadResenias = cantidadResenias
+//         this.peso = peso
+//         this.cantidadDescargas = cantidadDescargas
+//         this.instalado = false
+//         this.abierto = false
+//         this.puntajePromedio = (this.puntuacion + this.cantidadDescargas + this.peso) / 3 
+//         appJuegos.push(this)
+//     }
 
     
     
-     instalarApp(){
-         alert(`Instalando ${app.name}, aguarde un momento...
-         ${app.name} se instalo correctamente.`);
-         this.instalado = true;
-     }
-//miedo al booleano
-     abrirApp(){
-         if (this.instalado == true) {
-             alert(`${appJuego.developer}
-             Presenta:
-             <b>${app.name}</b>`);
-             this.abierto = true;
-         }
-     }
+//      instalarApp(){
+//          alert(`Instalando ${app.name}, aguarde un momento...
+//          ${app.name} se instalo correctamente.`);
+//          this.instalado = true;
+//      }
+// //miedo al booleano
+//      abrirApp(){
+//          if (this.instalado == true) {
+//              alert(`${appJuego.developer}
+//              Presenta:
+//              <b>${app.name}</b>`);
+//              this.abierto = true;
+//          }
+//      }
 
-     cerrarApp(){
-         if (this.instalado == true && this.abierto == true) {
-             alert(`${app.name} se cerro correctamente.`);
-             this.abierto = false;
-         }
-     }
+//      cerrarApp(){
+//          if (this.instalado == true && this.abierto == true) {
+//              alert(`${app.name} se cerro correctamente.`);
+//              this.abierto = false;
+//          }
+//      }
 
-     desinstalarApp(){
-         if (this.instalado == true) {
-             alert(`${app.name} se desinstalo correctamente.
-             Se liberó ${app.peso}GB de su dispositivo.`);
-             this.instalado= false;
-         }
-     }
+//      desinstalarApp(){
+//          if (this.instalado == true) {
+//              alert(`${app.name} se desinstalo correctamente.
+//              Se liberó ${app.peso}GB de su dispositivo.`);
+//              this.instalado= false;
+//          }
+//      }
 
-     mostrarInfoApp(){
-         return `
-         Desarrollador: ${this.developer} </br>
-         Puntuación: ${this.puntuacion}⋆ </br>
-         Cantidad de Reseñas: ${this.cantidadResenias} Mil </br>
-         Peso: ${this.peso} GB </br>
-         Cantidad de Descargas: ${this.cantidadDescargas} M. </br>
-         `
-     }
-
-
-}
-
-const appJuego0 = new AppJuegos ("Azur Lane", "Yostar Limited.", 4.5, 142, 1.5, 1.25)
-const appJuego1 = new AppJuegos ("Arknights", "Yostar Limited.", 4.6, 160, 1.6, 1.50)
-const appJuego2 = new AppJuegos ("Clash Royale", "Supercell", 4.3, 34, 0.14, 0.1)
-const appJuego3 = new AppJuegos ("Candy Crush Saga", "King", 4.6, 33, 0.08, 1)
-const appJuego4 = new AppJuegos ("Monster Hunter Stories", "Capcom CO.", 4.2, 13, 3.2, 0.2)
-const appJuego5 = new AppJuegos ("Final Fantasy BE", "Square Enix Co.", 4.3, 103, 0.1, 1.1)
-const appJuego6 = new AppJuegos ("Call of Duty: Mobile", "Activision", 4.2, 14, 2.1, 0.2)
-const appJuego7 = new AppJuegos ("Pokémon GO", "Niantic, Inc.", 4.2, 15, 0.12, 0.25) 
+//      mostrarInfoApp(){
+//          return `
+//          Desarrollador: ${this.developer} </br>
+//          Puntuación: ${this.puntuacion}⋆ </br>
+//          Cantidad de Reseñas: ${this.cantidadResenias} Mil </br>
+//          Peso: ${this.peso} GB </br>
+//          Cantidad de Descargas: ${this.cantidadDescargas} M. </br>
+//          `
+//      }
 
 
-for (i = 0; i < appJuegos.length; i++){
-    console.log(appJuegos[i].name + " " + appJuegos[i].puntajePromedio);
-}
+// }
 
-// Mostrar los mejores 2 juegos segun:
-//Crear una función para elegir el mejor juego según su peso.
-//Crear una función para elegir el mejor juego según su puntuación.
-//Crear una función para elegir el mejor juego según su cantidad de descargas.
+// const appJuego0 = new AppJuegos ("Azur Lane", "Yostar Limited.", 4.5, 142, 1.5, 1.25)
+// const appJuego1 = new AppJuegos ("Arknights", "Yostar Limited.", 4.6, 160, 1.6, 1.50)
+// const appJuego2 = new AppJuegos ("Clash Royale", "Supercell", 4.3, 34, 0.14, 0.1)
+// const appJuego3 = new AppJuegos ("Candy Crush Saga", "King", 4.6, 33, 0.08, 1)
+// const appJuego4 = new AppJuegos ("Monster Hunter Stories", "Capcom CO.", 4.2, 13, 3.2, 0.2)
+// const appJuego5 = new AppJuegos ("Final Fantasy BE", "Square Enix Co.", 4.3, 103, 0.1, 1.1)
+// const appJuego6 = new AppJuegos ("Call of Duty: Mobile", "Activision", 4.2, 14, 2.1, 0.2)
+// const appJuego7 = new AppJuegos ("Pokémon GO", "Niantic, Inc.", 4.2, 15, 0.12, 0.25) 
 
-this.eleccionSortUsuario();
+
+// for (i = 0; i < appJuegos.length; i++){
+//     console.log(appJuegos[i].name + " " + appJuegos[i].puntajePromedio);
+// }
+
+// // Mostrar los mejores 2 juegos segun:
+// //Crear una función para elegir el mejor juego según su peso.
+// //Crear una función para elegir el mejor juego según su puntuación.
+// //Crear una función para elegir el mejor juego según su cantidad de descargas.
+
+// this.eleccionSortUsuario();
 
 
-function eleccionSortUsuario(){
+// function eleccionSortUsuario(){
 
-    eleccionSort = prompt(`Desea organizar los juegos según:
-    Peso, Puntuación, Cantidad de Descargas, o Promedio Total.`);
+//     eleccionSort = prompt(`Desea organizar los juegos según:
+//     Peso, Puntuación, Cantidad de Descargas, o Promedio Total.`);
 
-    appJuegos.sort((a, b) =>{
+//     appJuegos.sort((a, b) =>{
 
-        switch(eleccionSort.toLowerCase()) {
-            case "peso" :
-                var x = a.peso
-                var y = b.peso
+//         switch(eleccionSort.toLowerCase()) {
+//             case "peso" :
+//                 var x = a.peso
+//                 var y = b.peso
 
-                break;
+//                 break;
             
-            case "puntuacion" :
-                var x = a.puntuacion
-                var y = b.puntuacion
-                break;
+//             case "puntuacion" :
+//                 var x = a.puntuacion
+//                 var y = b.puntuacion
+//                 break;
     
-            case "descargas" :
-                var x = a.cantidadDescargas
-                var y = b.cantidadDescargas
+//             case "descargas" :
+//                 var x = a.cantidadDescargas
+//                 var y = b.cantidadDescargas
 
-                break;
+//                 break;
     
-            case "promedio" :
-                var x = a.puntajePromedio
-                var y = b.puntajePromedio
-                break;
-        }
+//             case "promedio" :
+//                 var x = a.puntajePromedio
+//                 var y = b.puntajePromedio
+//                 break;
+//         }
 
-        if (x == y) {
-            return 0;
-        }
-        if (x > y) {
-            return -1;
-        }
-        return 1;
-    });
+//         if (x == y) {
+//             return 0;
+//         }
+//         if (x > y) {
+//             return -1;
+//         }
+//         return 1;
+//     });
+// }
+
+// document
+// for ( i = 0; i < appJuegos.length; i++ ){
+//     document.write(`<b> ${[i]} : ${appJuegos[i].name}</b></br> ${appJuegos[i].mostrarInfoApp()}</br>`)
+// }
+
+
+/*Crear una funcion que nos devuelva el profesor asignado a la clase, y el nombre de los alumnos.
+, también una función que nos indique en cuantas clases esta cofla, dando:
+El nombre de la clase, y el nombre de sus profesores.*/
+
+const materias = [];
+
+class Materia {
+    constructor (nombre, alumnos, profesor) {
+        this.nombre = nombre;
+        this.alumnos = alumnos;
+        this.profesor = profesor;
+        materias.push(this)
+    }
 }
 
-document
-for ( i = 0; i < appJuegos.length; i++ ){
-    document.write(`<b> ${[i]} : ${appJuegos[i].name}</b></br> ${appJuegos[i].mostrarInfoApp()}</br>`)
+const biologia = new Materia ("Biología",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal", "Cofla", "Fabian", "Nicolas", "Chycho", "Emiliano",
+"Lionel", "Agüero", "Ricardo", "Nacho", "Narela"],
+ "Profera Linfosis")
+const ciudadania = new Materia ("Ciudadania",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal", "Fabian", "Nicolas", "Chycho", "Emiliano",
+"Lionel", "Agüero", "Ricardo", "Nacho", "Narela"],
+"Profesor Duarte")
+const matematicas = new Materia ("Matemáticas",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal"],
+"Profesora García")
+const literatura = new Materia ("Literatura",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal", "Cofla"],
+"Profesora Yaguedú")
+const edfisica = new Materia ("Educación Física",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal", "Cofla", "Fabian", "Nicolas", "Chycho", "Emiliano",
+"Lionel", "Agüero", "Ricardo", "Nacho", "Narela"],
+"Profesor Walter")
+const historia = new Materia ("Historia",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal", "Fabian", "Nicolas", "Chycho", "Emiliano",
+"Lionel", "Agüero", "Ricardo", "Nacho", "Narela"],
+"Profesor Etcheverría")
+const expresionesAudiovisuales = new Materia ("Expresioes AudioVisuales",
+["Marcos", "Cristian", "Claudio", "Laura", "Raquel", "Cristina", "Horacio", "Rodriguez",
+"Larreta", "Mauricio", "Maria", "Eugenia", "Vidal", "Cofla"],
+"Profesora Dorado") 
+
+this.buscarAlumno();
+
+this.inscribirMateria();
+
+function buscarAlumno(nombreAlumno) {
+    nombreAlumno = prompt("Ingrese el nombre del Alumno para mostrar materias inscriptas y docentes")
+    for (let i = 0; i < materias.length; i++) {
+        if (materias[i].alumnos.map( p => { 
+            return p.toLowerCase()}).includes(nombreAlumno.toLowerCase())) {
+            document.write(`Materia: <b>${materias[i].nombre}</b> <br> Docente <b>${materias[i].profesor}</b> <br><br>`)
+        }   
+    }
 }
+
+function inscribirMateria(materia) {
+    materia = prompt(`Seleccione una materia para continuar con la inscripción:
+    Biología, Matemáticas, Literatura, Educación Física,
+    Historia, Expresiones Audiovisuales, Ciudadania`)
+    switch (materia.toLowerCase()) {
+        case "biología":
+            materia = biologia;
+            break;
+        case "matemáticas":
+            materia = matematicas;
+            break;
+        case "literatura":
+            materia = literatura;
+            break;
+        case "educación":
+        case "física":
+        case "educación física":
+            materia = edfisica;
+            break;
+        case "historia":
+            materia = historia;
+            break;
+        case "expresiones":
+        case "audiovisuales":
+        case "expresiones audiovisuales":
+            materia = expresionesAudiovisuales;
+            break;
+        case "ciudadania":
+            materia = ciudadania
+            break;
+    }
+    
+    console.log(materia)
+
+    if (materia.alumnos.length < 20) {
+
+        nuevoAlumno = prompt("Ingrese su nombre para inscribirse.")
+        materia.alumnos.push(nuevoAlumno);
+        alert(`Usted se inscribió correctamente a ${materia.nombre}
+        con ${materia.profesor}`);
+        return;
+    } else if (materia == "") {
+        alert("Introduzca un nombre valido.")
+        this.inscribirMateria();
+    } else alert(`Esta cátedra ya dispone de ${materia.alumnos.length} alumnos. Elija otra materia.`)
+
+
+    this.inscribirMateria();
+}
+
+
+/*Listado de materias y preguntar en cual se quiere inscrir.
+Si hay mas de 20 alumnos, negar la inscripción, si hay menos de 20
+inscribirlo y añadirlo a la lista. */
